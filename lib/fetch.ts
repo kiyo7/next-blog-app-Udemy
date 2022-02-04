@@ -8,7 +8,7 @@ export const getAllPostsData = async () => {
   return posts
 }
 
-export const getAllPostIds = async () => {
+export const getAllPostsIds = async () => {
   const res = await fetch(
     new URL(`${process.env.NEXT_PUBLIC_RESTAPI_URL}/get-blogs/`)
   )
@@ -24,7 +24,7 @@ export const getAllPostIds = async () => {
 
 export const getPostData = async (id: string) => {
   const res = await fetch(
-    new URL(`${process.env.NEXT_PUBLIC_RESTAPI_URL}/get-blogs-${id}`)
+    new URL(`${process.env.NEXT_PUBLIC_RESTAPI_URL}/get-blogs/${id}`)
   )
   const post = await res.json()
   return post
